@@ -1,0 +1,37 @@
+:root {
+    --background-color: #fff;
+    --background-light: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --primary-color: rgb(104, 111, 88);
+    --text-color: #0A0A0A;
+    --text-light: #575757;
+    --font-size: 16px;
+    --animation-speed: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+@import "partials/_navigationbar.css";
+
+@import "partials/_section.css";
+
+.main {
+    padding-block: 3vw
+}
+
+.container {
+    padding-inline: 15vw;
+}

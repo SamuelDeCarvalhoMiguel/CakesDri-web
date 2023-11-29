@@ -4,10 +4,6 @@ export default function NavigationBar() {
 
     const links = [
         {
-            name: "Home",
-            path: "/",
-        },
-        {
             name: "Recipes",
             path: "/recipes",
         },

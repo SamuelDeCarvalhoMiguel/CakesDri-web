@@ -7,9 +7,9 @@
 
 .section a {
     display: block;
-    margin: 20px;
+    margin: 10px;
     text-align: center;
-    width: 200px;
+    width: 180px;
     background-color: var(--primary-color);
     color: #fff;
     padding: .75em 1em;

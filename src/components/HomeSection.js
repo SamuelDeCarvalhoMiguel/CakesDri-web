@@ -1,4 +1,4 @@
-export default function HeroSection() {
+export default function HomeSection() {
     return (
         <div className="section">
             <a href="">Bolos</a>

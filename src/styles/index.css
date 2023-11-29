@@ -28,6 +28,52 @@ a {
 
 @import "partials/_section.css";
 
+@import "partials/_previousSearches.css";
+
+.recipes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 1em;
+}
+
+.recipe-card {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px var(--shadow-color);
+    max-width: 200px;
+}
+
+.recipe-card-info {
+    padding: 15px;
+}
+
+.recipe-card img {
+    max-width: 100%;
+    display: block;
+}
+
+.recipe-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-top: .10em;
+    margin-bottom: .5em;
+    color: var(--text-color);
+}
+
+.recipe-desc {
+    color: var(--text-light);
+    font-size: .9e;
+    letter-spacing: 1px;
+}
+
+.view-button {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: .25em;
+    display: inline-block;
+}
+
 .main {
     padding-block: 3vw
 }

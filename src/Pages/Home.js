@@ -1,7 +1,9 @@
-import HeroSection from "../components/HeroSection";
+import HomeSection from "../components/HomeSection";
+import PreviousSearches from "../components/PreviousSearches";
 
 export default function Home() {
     return <div>
-        <HeroSection />
+        <PreviousSearches />
+        <HomeSection />
     </div>
 }

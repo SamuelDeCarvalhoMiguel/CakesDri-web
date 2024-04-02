@@ -6,23 +6,12 @@
         margin-bottom: 1em;
     }
 
-    .previous-searches-container {
-        .search-item {
-            background-color: var(--primary-color);
-            display: inline-block;
-            padding: 0.5em 1em;
-            margin: 0 1em 1em 0;
-            color: #fff;
-            border-radius: 30px;
-            box-shadow: 0 3px 6px var(--shadow-color);
-        }
-    }
-
     .search-box {
         display: flex;
         align-items: center;
         height: 35px;
         justify-content: flex-end;
+        padding-top: 1em;
         padding-bottom: 2em;
 
         .input {

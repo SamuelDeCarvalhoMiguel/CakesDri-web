@@ -6,9 +6,9 @@ import {
 
 import NavigationBar from "./components/NavigationBar";
 
-import Home from "./Pages/Home";
-import Recipes from "./Pages/Recipes";
-import Create from "./Pages/Create";
+import Home from "./pages/Home";
+import Recipes from "./pages/Recipes";
+import Create from "./pages/Create";
 
 function App() {
   return (

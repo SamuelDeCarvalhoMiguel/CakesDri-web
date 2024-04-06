@@ -18,14 +18,7 @@ apiUtils.exec = async (endpoint, params) => {
   const config = await GetConfig();
   const url = config.apiUrl + endpoint;
 
-  return await fetch(url, internalParams)
-    .then(res => {
-      console.log(res);
-
-      if (res.status >= 200 && res.status < 300) {
-        return res.json();
-      }
-    });
+  return (await fetch(url, internalParams)).json();
 };
 
 export default apiUtils;

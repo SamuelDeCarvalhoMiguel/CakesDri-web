@@ -1,35 +1,26 @@
+import { useEffect, useState } from "react"
 import PreviousSearches from "../components/PreviousSearches"
 import RecipeCard from "../components/RecipeCard"
 import services from "../api/services/recipeServices"
 
 export default function Recipes() {
-    const recipes = [
-        {
-            title: "BRIGADEIRO GOURMET",
-            image: "/img/gallery/brigadeiros.jpg",
-            desc: "RENDIMENTO: 31 Brigadeiros com 15g de massa e 18g de peso final (com os granulados de chocolate)",
-        },
-        {
-            title: "BOLO DE TESTE",
-            image: "/img/gallery/bolo-drip-cake-simples-de-morango.jpg",
-            desc: "RENDIMENTO: 31 Brigadeiros com 15g de massa e 18g de peso final (com os granulados de chocolate)",
-        }, {
-            title: "BRIGADEIRO GOURMET",
-            image: "/img/gallery/brigadeiros.jpg",
-            desc: "RENDIMENTO: 31 Brigadeiros com 15g de massa e 18g de peso final (com os granulados de chocolate)",
-        },
-        {
-            title: "BOLO DE TESTE",
-            image: "/img/gallery/bolo-drip-cake-simples-de-morango.jpg",
-            desc: "RENDIMENTO: 31 Brigadeiros com 15g de massa e 18g de peso final (com os granulados de chocolate)",
-        }
-    ].sort(() => Math.random() - 0.5)
+    const [recipes, setRecipes] = useState([])
+
+    useEffect(() => {
+        initializeRecipes();
+    }, [])
+
+    const initializeRecipes = () => {
+        services.getAll().then(res => {
+            setRecipes(res);
+        })
+    }
 
     return <div>
         <PreviousSearches />
         <div className="recipes-container">
-            {recipes.map((recipe, index) => (
-                <RecipeCard key={index} recipe={recipe} />
+            {recipes.map(recipe => (
+                <RecipeCard key={recipe.id} recipe={recipe} />
             ))}
         </div>
     </div>

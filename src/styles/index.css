@@ -30,6 +30,8 @@ a {
 
 @import "partials/_previousSearches.css";
 
+@import "partials/_image.css";
+
 .recipes-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

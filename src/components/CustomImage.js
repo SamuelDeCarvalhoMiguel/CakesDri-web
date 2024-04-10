@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function CustomImage({ imgSrc }) {
     return (
         <div className="custom-image" >
@@ -5,3 +7,7 @@ export default function CustomImage({ imgSrc }) {
         </div>
     )
 }
+
+CustomImage.propTypes = {
+    imgSrc: PropTypes.string,
+};

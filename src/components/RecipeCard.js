@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 
 export default function RecipeCard({ recipe }) {
 
-    if (!recipe?.imageAdress)
-        recipe.imageAdress = '/img/gallery/Sample.jpeg'
+    if (!recipe?.imageAddress)
+        recipe.imageAddress = '/img/gallery/Sample.jpeg'
 
 
     return (
         <div className="recipe-card">
-            <CustomImage imgSrc={recipe.imageAdress} />
+            <CustomImage imgSrc={recipe.imageAddress} />
             <div className="recipe-card-info">
                 <p className="recipe-title">{recipe.title}</p>
                 <p className="recipe-desc">{recipe.description}</p>
-                <a href="3!" className="view-button">View recipe</a>
+                <a href="/viewRecipe" className="view-button">View recipe</a>
             </div>
         </div>
     )
@@ -21,5 +21,9 @@ export default function RecipeCard({ recipe }) {
 
 
 RecipeCard.propTypes = {
-    recipe: PropTypes.object.isRequired,
+    recipe: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        imageAddress: PropTypes.string,
+    }).isRequired,
 };

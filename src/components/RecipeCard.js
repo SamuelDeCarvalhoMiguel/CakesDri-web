@@ -1,11 +1,11 @@
 import CustomImage from "./CustomImage"
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function RecipeCard({ recipe }) {
 
     if (!recipe?.imageAddress)
         recipe.imageAddress = '/img/gallery/Sample.jpeg'
-
 
     return (
         <div className="recipe-card">
@@ -13,7 +13,7 @@ export default function RecipeCard({ recipe }) {
             <div className="recipe-card-info">
                 <p className="recipe-title">{recipe.title}</p>
                 <p className="recipe-desc">{recipe.description}</p>
-                <a href="/viewRecipe" className="view-button">View recipe</a>
+                <Link to={`/viewRecipe/${recipe.id}`} className="view-button">View recipe</Link>
             </div>
         </div>
     )
@@ -22,6 +22,7 @@ export default function RecipeCard({ recipe }) {
 
 RecipeCard.propTypes = {
     recipe: PropTypes.shape({
+        id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
         imageAddress: PropTypes.string,

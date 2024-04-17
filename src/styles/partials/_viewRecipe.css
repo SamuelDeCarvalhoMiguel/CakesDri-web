@@ -1,0 +1,33 @@
+.viewRecipe {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewRecipe-image {
+  height: 300px;
+  width: 600px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewRecipe-title {
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: var(--primary-color);
+  text-shadow: 0 1px 3px var(--shadow-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    color: var(--text-color);
+  }
+}

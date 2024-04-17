@@ -32,6 +32,8 @@ a {
 
 @import "partials/_image.css";
 
+@import "partials/_viewRecipe.css";
+
 .recipes-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -64,7 +66,7 @@ a {
 
 .recipe-desc {
     color: var(--text-light);
-    font-size: .9e;
+    font-size: .9;
     letter-spacing: 1px;
 }
 

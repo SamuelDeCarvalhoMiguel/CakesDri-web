@@ -6,10 +6,10 @@ import {
 
 import NavigationBar from "./components/NavigationBar";
 
-import Home from "./pages/Home";
-import Recipes from "./pages/Recipes";
+import Home from "./pages/Home/Home";
+import Recipes from "./pages/Recipes/Recipes";
 import Create from "./pages/Create";
-import ViewRecipe from "./components/ViewRecipe";
+import ViewRecipe from "./components/ViewRecipe/ViewRecipe";
 
 function App() {
   return (

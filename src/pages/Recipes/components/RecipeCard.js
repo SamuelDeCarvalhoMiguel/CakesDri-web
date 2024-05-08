@@ -1,4 +1,4 @@
-import CustomImage from "./CustomImage"
+import CustomImage from "../../../components/CustomImage"
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 

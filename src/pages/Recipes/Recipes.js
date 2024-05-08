@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import PreviousSearches from "../components/PreviousSearches"
-import RecipeCard from "../components/RecipeCard"
-import services from "../api/services/recipeServices"
+import PreviousSearches from "../../components/PreviousSearches"
+import RecipeCard from "./components/RecipeCard"
+import services from "../../api/services/recipeServices"
 
 export default function Recipes() {
     const [recipes, setRecipes] = useState([])

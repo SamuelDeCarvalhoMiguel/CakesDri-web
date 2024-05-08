@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom';
-import services from '../api/services/recipeServices';
+import services from '../../../api/services/recipeServices';
 
 function ViewRecipe() {
   const { id } = useParams();

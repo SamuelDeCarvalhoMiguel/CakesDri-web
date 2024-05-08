@@ -4,7 +4,7 @@ import services from '../../../api/services/recipeServices';
 
 function ViewRecipe() {
   const { id } = useParams();
-  const [recipe, setRecipe] = useState()
+  const [recipe, setRecipe] = useState();
 
   useEffect(() => {
     initializeRecipes();
@@ -17,11 +17,14 @@ function ViewRecipe() {
   }
 
   if (!recipe) {
-    return <div>Recipe not found</div>;
+    return <div className="viewRecipe">Recipe not found</div>;
   }
 
+  if (!recipe?.imageAddress)
+    recipe.imageAddress = '/img/gallery/Sample.jpeg'
+
   return (
-    <div>
+    <div className="viewRecipe">
       <div className="viewRecipe-title">
         <h1>{recipe.title}</h1>
       </div>
@@ -29,9 +32,11 @@ function ViewRecipe() {
         <img src={recipe.imageAddress} alt={recipe.title} />
       </div>
       <div className="recipe-detail">
-        <p>{recipe.description}</p>
+        <h2>Receita</h2>
+        <div>
+          <p>{recipe.description}</p>
+        </div>
       </div>
-      <h1>Ingredientes</h1>
     </div>
   );
 }

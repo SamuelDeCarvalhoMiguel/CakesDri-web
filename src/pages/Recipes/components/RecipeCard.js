@@ -12,7 +12,6 @@ export default function RecipeCard({ recipe }) {
             <CustomImage imgSrc={recipe.imageAddress} />
             <div className="recipe-card-info">
                 <p className="recipe-title">{recipe.title}</p>
-                <p className="recipe-desc">{recipe.description}</p>
                 <Link to={`/viewRecipe/${recipe.id}`} className="view-button">View recipe</Link>
             </div>
         </div>

@@ -8,8 +8,8 @@ import NavigationBar from "./components/NavigationBar";
 
 import Home from "./pages/Home/Home";
 import Recipes from "./pages/Recipes/Recipes";
-import Create from "./pages/Create";
-import ViewRecipe from "./components/ViewRecipe/ViewRecipe";
+import Create from "./pages/Create/Create";
+import ViewRecipe from "./pages/Recipes/components/ViewRecipe";
 
 function App() {
   return (
